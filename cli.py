@@ -1,24 +1,21 @@
-from utils import count_words, format_output, log
-from utils import save_history
-save_history({"text": text, "count": count_words(text)})
 def run():
     while True:
-        print("\n1. Count words")
-        print("2. Exit")
-print("3. Show history")
+        print("\n==== MENU ====")
+        print("1. Count words")
+        print("2. Show history")
+        print("3. Exit")
 
-        choice = input("Choose option: ")
-        log(f"Choice: {choice}")
+        choice = input("Choose option: ").strip()
 
         if choice == "1":
-            text = input("Enter text: ")
-            if not text.strip():
-                print("Empty input!")
-            else:
-                print(format_output(count_words(text)))
+            handle_count()
 
         elif choice == "2":
+            show_history()
+
+        elif choice == "3":
+            print("Goodbye!")
             break
-elif choice == "3":
-    with open("history.json", "r") as f:
-        print(f.read())
+
+        else:
+            print("Invalid choice, try again.")
