@@ -5,6 +5,7 @@ def run():
     while True:
         print("\n1. Count words")
         print("2. Exit")
+print("3. Show history")
 
         choice = input("Choose option: ")
         log(f"Choice: {choice}")
@@ -18,3 +19,6 @@ def run():
 
         elif choice == "2":
             break
+elif choice == "3":
+    with open("history.json", "r") as f:
+        print(f.read())
