@@ -1,8 +1,10 @@
 def count_words(text):
+    """Return the number of words in the given text."""
     return len(text.split())
 
 
 def format_output(count):
+    """Return formatted string with word count."""
     return f"Total words: {count}"
 
 def log(message):
