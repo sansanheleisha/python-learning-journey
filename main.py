@@ -32,3 +32,7 @@ from cli import run
 
 if __name__ == "__main__":
     run()
+try:
+    text = input("Enter text: ")
+except Exception as e:
+    print("Error:", e)
