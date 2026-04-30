@@ -27,3 +27,8 @@ if __name__ == "__main__":
 
 from utils import log
 log(f"User selected option: {choice}")
+
+from cli import run
+
+if __name__ == "__main__":
+    run()
