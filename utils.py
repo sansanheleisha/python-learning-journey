@@ -8,3 +8,17 @@ def format_output(count):
 def log(message):
     with open("app.log", "a") as f:
         f.write(message + "\n")
+
+import json
+
+def save_history(entry):
+    try:
+        with open("history.json", "r") as f:
+            data = json.load(f)
+    except:
+        data = []
+
+    data.append(entry)
+
+    with open("history.json", "w") as f:
+        json.dump(data, f, indent=2)
