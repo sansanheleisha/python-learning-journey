@@ -9,3 +9,13 @@ This repository contains my first steps in learning Python.
 - Functions
 
 More coming soon 🚀
+
+## Features
+- CLI interface
+- Word counting
+- History tracking
+- Logging
+
+## Run
+```bash
+python main.py
