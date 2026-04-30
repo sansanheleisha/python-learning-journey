@@ -1,5 +1,6 @@
 from utils import count_words, format_output, log
-
+from utils import save_history
+save_history({"text": text, "count": count_words(text)})
 def run():
     while True:
         print("\n1. Count words")
