@@ -63,13 +63,21 @@ def show_stats():
         print("No statistics available.")
 
 
+def clear_history():
+    with open("history.json", "w", encoding="utf-8") as f:
+        json.dump([], f)
+
+    print("History cleared.")
+
+
 def run():
     while True:
         print("\n==== MENU ====")
         print("1. Count words")
         print("2. Show history")
         print("3. Show statistics")
-        print("4. Exit")
+        print("4. Clear history")
+        print("5. Exit")
 
         choice = input("Choose option: ").strip()
 
@@ -83,6 +91,9 @@ def run():
             show_stats()
 
         elif choice == "4":
+            clear_history()
+
+        elif choice == "5":
             print("Goodbye!")
             break
 
