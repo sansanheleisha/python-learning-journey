@@ -85,6 +85,21 @@ def clear_history():
     print("History cleared.")
 
 
+def export_history():
+    data = load_history()
+
+    if not data:
+        print("No history to export.")
+        return
+
+    with open("history_export.txt", "w", encoding="utf-8") as f:
+        for item in data:
+            line = f'Text: "{item["text"]}" | Words: {item["count"]}\n'
+            f.write(line)
+
+    print("History exported to history_export.txt")
+
+
 def run():
     while True:
         print("\n==== MENU ====")
@@ -93,7 +108,8 @@ def run():
         print("3. Search history")
         print("4. Show statistics")
         print("5. Clear history")
-        print("6. Exit")
+        print("6. Export history")
+        print("7. Exit")
 
         choice = input("Choose option: ").strip()
 
@@ -113,6 +129,9 @@ def run():
             clear_history()
 
         elif choice == "6":
+            export_history()
+
+        elif choice == "7":
             print("Goodbye!")
             break
 
