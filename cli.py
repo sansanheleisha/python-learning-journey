@@ -98,7 +98,11 @@ def export_history():
 
     with open("history_export.txt", "w", encoding="utf-8") as f:
         for item in data:
-            line = f'Text: "{item["text"]}" | Words: {item["count"]}\n'
+         line = (
+    f'Text: "{item["text"]}" | '
+    f'Words: {item["count"]} | '
+    f'Time: {item["timestamp"]}\n'
+)
             f.write(line)
 
     print("History exported to history_export.txt")
