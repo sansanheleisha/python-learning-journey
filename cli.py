@@ -79,9 +79,10 @@ def show_stats():
     average_words = total_words / total_checks
 
     print("\n==== STATISTICS ====")
-    print(f"Total checks: {total_checks}")
-    print(f"Total words counted: {total_words}")
-    print(f"Average words per text: {average_words:.2f}")
+print("\n===== PROJECT STATS =====")
+print(f"Total checks        : {total_checks}")
+print(f"Total words counted : {total_words}")
+print(f"Average words/text  : {average_words:.2f}")
 
 
 def clear_history():
