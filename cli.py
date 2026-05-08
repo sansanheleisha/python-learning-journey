@@ -3,7 +3,9 @@ import json
 
 
 def handle_count():
-    text = input("Enter a sentence: ")
+   if len(text) > 200:
+    print("Text is too long. Maximum 200 characters.")
+    return
 
     if not text.strip():
         print("Empty input!")
