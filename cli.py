@@ -37,7 +37,11 @@ def show_history():
     print("\n==== HISTORY ====")
 
     for item in data:
-        print(f'Text: "{item["text"]}" | Words: {item["count"]}')
+    print(
+    f'Text: "{item["text"]}" | '
+    f'Words: {item["count"]} | '
+    f'Time: {item["timestamp"]}'
+)
 
 
 def search_history():
