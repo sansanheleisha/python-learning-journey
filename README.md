@@ -1,21 +1,24 @@
 # Python Learning Journey
 
-This repository contains my first steps in learning Python.
-
-## Topics:
-- Variables
-- Strings
-- Lists
-- Functions
-
-More coming soon 🚀
+Simple CLI application for practicing Python basics.
 
 ## Features
-- CLI interface
-- Word counting
-- History tracking
-- Logging
 
-## Run
+- Count words in text
+- Save history
+- Search through history
+- View statistics
+- Clear history
+- Logging system
+
+## Technologies
+
+- Python
+- JSON
+- File handling
+- CLI
+
+## Run project
+
 ```bash
 python main.py
