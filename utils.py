@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 
 def count_words(text):
@@ -20,8 +21,11 @@ def save_history(entry):
     try:
         with open("history.json", "r", encoding="utf-8") as f:
             data = json.load(f)
+
     except FileNotFoundError:
         data = []
+
+    entry["timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     data.append(entry)
 
