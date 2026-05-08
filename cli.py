@@ -25,8 +25,8 @@ def load_history():
         with open("history.json", "r", encoding="utf-8") as f:
             return json.load(f)
 
-    except FileNotFoundError:
-        return []
+except (FileNotFoundError, json.JSONDecodeError):
+    return []
 
 
 def show_history():
